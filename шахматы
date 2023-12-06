@@ -1,0 +1,18 @@
+x1 = int(input())
+y1 = int(input())
+x2 = int(input())
+y2 = int(input())
+check1_white = True
+check2_white = True
+if x1 % 2 == 0 and y1 % 2 == 1 or y1 % 2 == 0 and x1 % 2 == 1:
+    check1_white = True
+else:
+    check1_white = False
+if x2 % 2 == 0 and y2 % 2 == 1 or y2 % 2 == 0 and x2 % 2 == 1:
+    check2_white = True
+else:
+    check2_white = False
+if check1_white == check2_white:
+    print('принадлежат одному цвету')
+else:
+    print('не принадлежат одному цвету')
