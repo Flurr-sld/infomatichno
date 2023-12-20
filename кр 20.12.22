@@ -1,0 +1,9 @@
+number24 = input()
+
+symbols = '0123456789ABCDEFGHIJKLMN'
+
+decimal = 0
+for digit in number24:
+    decimal = decimal * 24 + symbols.index(digit.upper())
+
+print(decimal)
