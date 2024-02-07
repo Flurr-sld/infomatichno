@@ -1,0 +1,14 @@
+num_list = input().split()
+max_sum = 0
+for num in num_list:
+    sum_of_chars = 0
+    for char in num:
+        sum_of_chars += int(char)
+    if max_sum < sum_of_chars:
+        max_sum = sum_of_chars
+for num in num_list:
+    sum_of_chars = 0
+    for char in num:
+        sum_of_chars += int(char)
+    if sum_of_chars == max_sum:
+            print(num)
