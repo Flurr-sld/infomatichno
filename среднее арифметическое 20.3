@@ -1,0 +1,10 @@
+def avr(*numbers) -> float:
+    sum = 0
+    for number in numbers:
+        sum += number
+    n = len(numbers)
+    return sum / n
+
+
+ans = avr(1, 2, 3, 4)
+print(ans)
