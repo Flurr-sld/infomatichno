@@ -1,0 +1,31 @@
+def sys10to24(input_number: int) -> str:
+    notation = 24
+    compare_string = "0123456789abcdefghijklmn"
+    dividend = input_number
+    divisor = notation
+    answer = ""
+    while dividend != 0:
+        quotient = dividend // divisor
+        reminder = dividend % divisor
+        dividend = quotient
+        answer += compare_string[reminder]
+    answer = answer[::-1]
+    return answer
+
+
+def sysNto10(input_number: str, n: int) -> int:
+    compare_string = "0123456789abcdefghijklmnopqrstuvwxyz"
+    reversed_number = input_number[::-1]
+    ans = 0
+    for i in range(len(reversed_number)):
+        ans += compare_string.find(reversed_number[i]) * n**i
+    return ans
+
+
+answer = sysNto10('105', 8) + sysNto10('5f', 37) * sysNto10('1011', 3) ** sysNto10('ba', 15)
+
+answer = sys10to24(answer)
+
+answer = answer.count('h')
+
+print(answer)
